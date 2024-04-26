@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-var lcp = require('../lib/index.js');
-var yargs = require('yargs/yargs')
-var { hideBin } = require('yargs/helpers')
+import { startProxy } from '../lib/index.js';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
 
 try {
   var options = yargs(hideBin(process.argv))
@@ -38,7 +38,7 @@ try {
       })
       .parse();
 
-  lcp.startProxy(options.port, options.proxyUrl, options.proxyPartial, options.credentials, options.origin);
+  startProxy(options.port, options.proxyUrl, options.proxyPartial, options.credentials, options.origin);
 } catch (error) {
   console.error(error);
 }
