@@ -15,7 +15,7 @@ No 'Access-Control-Allow-Origin' header is present on the requested resource. Or
 ## Getting Started
 
 ```
-npm install -g local-cors-proxy
+npm install -g @hameda169/local-cors-proxy
 ```
 
 **Simple Example**
